@@ -1,0 +1,23 @@
+{
+  "name": "nyc-adventure",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A father–daughter NYC adventure — an interactive trip hype page, scrapbook, and planner.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^11.3.19",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.4.1"
+  }
+}
