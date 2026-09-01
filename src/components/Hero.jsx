@@ -54,9 +54,9 @@ export default function Hero() {
 
       <div style={{ position: 'relative', width: '100%', maxWidth: 1180, margin: '0 auto', padding: 'clamp(2rem,6vw,4rem) clamp(1.1rem,5vw,4rem) clamp(2.4rem,5vw,3.5rem)', color: 'var(--cream)' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}>
-          <div className="eyebrow on-dark">A Father + Daughter Adventure • {trip.month}</div>
+          <div className="eyebrow on-dark">{trip.travelerName} + Dad • {trip.month}</div>
           <h1 style={{ fontSize: 'clamp(3rem, 12vw, 8rem)', letterSpacing: '-0.02em', margin: '0.2rem 0 0.4rem', color: 'var(--cream)' }}>
-            New York<br />Is Waiting.
+            {trip.travelerName},<br />New York<br />Is Waiting.
           </h1>
           <p style={{ fontSize: 'clamp(1.05rem, 3vw, 1.5rem)', maxWidth: '30ch', lineHeight: 1.35, opacity: 0.92 }}>
             {trip.philosophy[0]} <br />
