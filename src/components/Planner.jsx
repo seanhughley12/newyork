@@ -35,7 +35,7 @@ export default function Planner() {
     <section id="planner" className="section section-full on-navy">
       <div style={{ maxWidth: 1180, margin: '0 auto', position: 'relative' }}>
         <Reveal>
-          <SectionHeader onDark eyebrow="Your Turn, Planner" title="You&rsquo;re running this trip too." lead="Everything you tapped around the site shows up here. Fill the rest in whenever the ideas hit you — it all saves automatically on this device." />
+          <SectionHeader onDark eyebrow="Your Turn, Planner" title="You&rsquo;re running this trip too." lead="Everything you tapped around the site shows up here. Fill the rest in whenever the ideas hit you. It all saves automatically on this device." />
         </Reveal>
 
         <div className="grid grid-2">
@@ -50,7 +50,7 @@ export default function Planner() {
               <Row label="Omakase foods you'd try" value={`${Object.values(store.omakaseVotes).filter((v) => v === 'yes').length}`} ok={Object.values(store.omakaseVotes).some((v) => v === 'yes')} />
               <div style={{ marginTop: '1.2rem' }}>
                 <button className="btn btn-taxi" onClick={celebrate} style={{ width: '100%' }}>
-                  I&rsquo;ve made {decisionsMade} {decisionsMade === 1 ? 'choice' : 'choices'} — celebrate! 🎉
+                  I&rsquo;ve made {decisionsMade} {decisionsMade === 1 ? 'choice' : 'choices'} so far. Celebrate! 🎉
                 </button>
               </div>
             </div>

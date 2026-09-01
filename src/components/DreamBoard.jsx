@@ -26,7 +26,7 @@ export default function DreamBoard() {
         <SectionHeader
           eyebrow="Dream Board"
           title="Save anything that makes you excited."
-          lead="Find a video, a bakery, an outfit, a spot you want to see? Pin it here. It&rsquo;s your digital travel scrapbook — it stays saved on this device."
+          lead="Find a video, a bakery, an outfit, a spot you want to see? Pin it here. It&rsquo;s your travel scrapbook, saved right on this device."
         />
       </Reveal>
 

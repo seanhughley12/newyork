@@ -6,5 +6,8 @@ import react from '@vitejs/plugin-react'
 // You can also override at build time:  BASE_PATH=/nyc-adventure/ npm run build
 export default defineConfig({
   plugins: [react()],
-  base: process.env.BASE_PATH || '/',
+  base: process.env.BASE_PATH || '/newyork/',
+  server: {
+    port: 5173,
+  },
 })

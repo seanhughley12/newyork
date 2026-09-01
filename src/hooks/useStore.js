@@ -34,7 +34,7 @@ function persist() {
   try {
     localStorage.setItem(KEY, JSON.stringify(memory))
   } catch {
-    /* storage full or blocked — choices simply won't persist */
+    /* storage full or blocked, choices simply won't persist */
   }
 }
 

@@ -12,12 +12,12 @@ export default function Fashion() {
         <SectionHeader
           eyebrow="Saturday • The Creative Stop"
           title="Designer for a day."
-          lead="You love making fashion more than shopping for it. So this stop is about ideas you can steal for your own designs — not buying stuff."
+          lead="You love making fashion more than shopping for it. So this stop is about ideas you can borrow for your own designs, not buying stuff."
         />
       </Reveal>
 
       <div className="grid grid-2" style={{ alignItems: 'stretch' }}>
-        {/* FIT — primary */}
+        {/* FIT, primary */}
         <Reveal>
           <div className="card" style={{ height: '100%', border: choice === 'fit' || choice === 'both' ? '2px solid var(--teal)' : '2px solid transparent' }}>
             <div style={{ position: 'relative' }}>
@@ -36,7 +36,7 @@ export default function Fashion() {
           </div>
         </Reveal>
 
-        {/* Mood — bonus */}
+        {/* Mood, bonus */}
         <Reveal delay={0.1}>
           <div className="card" style={{ height: '100%', border: choice === 'mood' || choice === 'both' ? '2px solid var(--taxi-deep)' : '2px solid transparent' }}>
             <div style={{ position: 'relative', aspectRatio: '16/10', background: 'linear-gradient(135deg, var(--blush), var(--taxi))', display: 'grid', placeItems: 'center' }}>

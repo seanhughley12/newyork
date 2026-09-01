@@ -12,7 +12,7 @@ export const trip = {
   startDate: '2026-10-22T09:00:00',
   city: 'New York City',
   month: 'October 2026',
-  philosophy: ['Amazing > packed.', "We're leaving room for New York to surprise us."],
+  philosophy: ['Amazing > packed.', 'A few big things, great food, and a whole lot of New York.'],
 }
 
 // ---------------------------------------------------------------------------
@@ -22,16 +22,23 @@ export const trip = {
 //  in /public and point to it here whenever you want.
 // ---------------------------------------------------------------------------
 export const images = {
+  // Hero: Manhattan skyline at golden dusk (verified skyline).
   heroSkyline:
-    'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1600&q=80', // NYC skyline / bridge
+    'https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=1600&q=80',
   taxi:
-    'https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=1200&q=80', // yellow taxi
+    'https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&fit=crop&w=1200&q=80', // NYC street
+  // Broadway: theatrical stage silhouettes + red curtain (verified performance image).
   broadway:
-    'https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1200&q=80', // Broadway lights
+    'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80',
+  // Statue of Liberty (verified: statue + harbor skyline).
   liberty:
-    'https://images.unsplash.com/photo-1602940659805-770d1b3b9911?auto=format&fit=crop&w=1200&q=80', // Statue of Liberty
+    'https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?auto=format&fit=crop&w=1400&q=80',
+  // Ballet: a dancer mid-movement.
   ballet:
-    'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=1200&q=80', // ballet
+    'https://images.unsplash.com/photo-1518834107812-67b0b7c58434?auto=format&fit=crop&w=1200&q=80',
+  // Grand ornate theater interior with red curtain, the ABT page hero.
+  balletHall:
+    'https://images.unsplash.com/photo-1580809361436-42a7ec204889?auto=format&fit=crop&w=1600&q=80',
   bakery:
     'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80', // pastries
   omakase:
@@ -40,8 +47,18 @@ export const images = {
     'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80', // fashion / design
   tea:
     'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1200&q=80', // afternoon tea
-  subway:
-    'https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=1200&q=80', // subway
+}
+
+// Appetizing pastry photos used as tasteful ambiance on the bakery cards.
+// These are STOCK photos (labeled as such on the card), not the actual shops,
+// so nothing is mislabeled. Swap for your own photos anytime.
+export const pastryPhotos = {
+  maryos: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=75',
+  hanis: 'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=700&q=75',
+  librae: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=75',
+  fromlucie: 'https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=700&q=75',
+  pastrybox: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=75',
+  ladywong: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=700&q=75',
 }
 
 // ---------------------------------------------------------------------------
@@ -84,7 +101,7 @@ export const anchors = [
 
 // ---------------------------------------------------------------------------
 //  WEEKEND AT A GLANCE
-//  "open" blocks are intentionally larger + styled as breathing room.
+//  "open" blocks are simply lighter days with fewer fixed items.
 // ---------------------------------------------------------------------------
 export const days = [
   {
@@ -98,14 +115,14 @@ export const days = [
     id: 'fri',
     day: 'Friday',
     tag: 'Liberty + Broadway',
-    items: ['Statue of Liberty', 'Breathing room', 'Hamilton at 7:00'],
+    items: ['Statue of Liberty', 'Time to explore', 'Hamilton at 7:00'],
     open: false,
   },
   {
     id: 'sat',
     day: 'Saturday',
-    tag: 'The slower day',
-    items: ['Bakery walk', 'One creative stop', 'Big open afternoon', 'Ballet at night'],
+    tag: 'Sweets + Ballet',
+    items: ['Bakery walk', 'One creative stop', 'Free afternoon', 'Ballet at night'],
     open: true,
   },
   {
@@ -119,7 +136,7 @@ export const days = [
 
 // ---------------------------------------------------------------------------
 //  OMAKASE
-//  Restaurant currently recorded as "Karami" — no address/menu invented.
+//  Restaurant currently recorded as "Karami". No address/menu invented.
 // ---------------------------------------------------------------------------
 export const omakase = {
   restaurantName: 'Karami',
@@ -146,7 +163,7 @@ export const liberty = {
   steps: [
     { n: 1, title: 'Ferry from The Battery', body: 'Board the boat and watch the skyline shrink behind you.' },
     { n: 2, title: 'Liberty Island', body: 'Walk right up to her. She is bigger than you think.' },
-    { n: 3, title: 'Inside the Pedestal', body: 'Go up to the observation level — a view only some visitors get.' },
+    { n: 3, title: 'Inside the Pedestal', body: 'Go up to the observation level, a view only some visitors get.' },
     { n: 4, title: 'The Museum + Original Torch', body: 'See the real original torch that used to light the harbor.' },
   ],
   fact: 'She was dedicated in 1886 and stands about 305 feet from the ground to the tip of her torch.',
@@ -160,7 +177,7 @@ export const hamilton = {
   venue: 'Richard Rodgers Theatre',
   address: '226 W 46th St, New York, NY',
   kidExplainer:
-    'Hamilton tells the true story of Alexander Hamilton using hip-hop, R&B, pop, and Broadway — all at once.',
+    'Hamilton tells the true story of Alexander Hamilton using hip-hop, R&B, pop, and Broadway, all at once.',
   songs: ['Alexander Hamilton', 'My Shot', 'The Schuyler Sisters'], // swap for your favorites
   watchFor: [
     { title: 'The choreography', body: 'The dancers never really stop moving.' },
@@ -171,7 +188,7 @@ export const hamilton = {
 }
 
 // ---------------------------------------------------------------------------
-//  BAKERIES  — the locals' recommendations (East Village / LES cluster)
+//  BAKERIES: the locals' recommendations (East Village / LES cluster)
 //  Goal: pick your top 3–4. NOT all six.
 // ---------------------------------------------------------------------------
 export const bakeries = [
@@ -204,7 +221,7 @@ export const fashion = {
 }
 
 // ---------------------------------------------------------------------------
-//  TEA — optional, configurable shortlist (empty until you decide)
+//  TEA: optional, configurable shortlist (empty until you decide)
 // ---------------------------------------------------------------------------
 export const tea = {
   shortlist: [], // e.g. [{ name: '', address: '' }]
@@ -218,6 +235,14 @@ export const ballet = {
   performanceName: '',
   theater: '',
   time: '',
+  intro:
+    'American Ballet Theatre is one of the greatest ballet companies in the world. Dancers train their whole lives to stand on that stage, and tonight we get to watch them.',
+  facts: [
+    { icon: '🌟', label: 'World-class', text: 'ABT is one of only a handful of truly world-famous ballet companies.' },
+    { icon: '🩰', label: 'On pointe', text: 'Ballerinas dance on the very tips of their toes in special pointe shoes.' },
+    { icon: '🎻', label: 'Live music', text: 'A full orchestra usually plays every note, live, while they dance.' },
+    { icon: '🤫', label: 'No words', text: 'Dancers tell the whole story with only their bodies and the music.' },
+  ],
   watchFor: ['Favorite costume', 'Favorite movement', 'Favorite musical moment', 'One thing to remember'],
 }
 

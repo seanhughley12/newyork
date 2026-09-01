@@ -1,6 +1,6 @@
-import { bakeries } from '../data/trip'
+import { bakeries, pastryPhotos } from '../data/trip'
 import { useStore } from '../hooks/useStore'
-import { Reveal, SectionHeader, Stamp } from './UI'
+import { Reveal, SectionHeader, SmartImage, Stamp } from './UI'
 
 function Score({ value, onChange, color }) {
   return (
@@ -44,7 +44,7 @@ export default function Bakeries() {
         <SectionHeader
           eyebrow="Saturday Morning • The Bakery Crawl"
           title="Build our bakery crawl."
-          lead="These are the spots locals told Dad about, all near each other in the East Village. You don&rsquo;t pick all six — choose your top 3 or 4 and we&rsquo;ll walk between them."
+          lead="These are the spots locals told Dad about, all near each other in the East Village. You don&rsquo;t pick all six. Choose your top 3 or 4 and we&rsquo;ll walk between them."
         />
       </Reveal>
 
@@ -65,9 +65,9 @@ export default function Bakeries() {
           return (
             <Reveal key={b.id} delay={i * 0.05}>
               <div className="card" style={{ display: 'flex', flexDirection: 'column', height: '100%', border: on ? '2px solid var(--teal)' : '2px solid transparent' }}>
-                <div style={{ position: 'relative', aspectRatio: '4/3', background: 'var(--cream-2)', display: 'grid', placeItems: 'center' }}>
-                  <span style={{ fontSize: '2.4rem' }}>🥐</span>
-                  <span style={{ position: 'absolute', bottom: 8, left: 8, fontSize: '0.66rem', color: 'var(--muted)', background: 'rgba(255,255,255,0.85)', padding: '2px 8px', borderRadius: 999 }}>photo coming</span>
+                <div style={{ position: 'relative', aspectRatio: '4/3', background: 'var(--cream-2)', overflow: 'hidden' }}>
+                  <SmartImage src={pastryPhotos[b.id]} alt={`Fresh pastries, representative photo for ${b.name}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} fallback="var(--blush)" />
+                  <span style={{ position: 'absolute', bottom: 8, left: 8, fontSize: '0.62rem', color: '#fff', background: 'rgba(11,31,58,0.6)', padding: '2px 8px', borderRadius: 999 }}>stock photo</span>
                   {on && <div style={{ position: 'absolute', top: 8, right: 8 }}><Stamp kind="pick">Your Pick</Stamp></div>}
                 </div>
                 <div style={{ padding: '1rem 1.1rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
@@ -110,8 +110,8 @@ export default function Bakeries() {
                     <input type="text" value={sc.tried || ''} onChange={(e) => setScore(b.id, 'tried', e.target.value)} placeholder="the actual thing we ordered" />
 
                     <div style={{ display: 'grid', gap: '0.7rem', marginTop: '0.9rem' }}>
-                      <div><label>Taste — Olivia</label><Score value={sc.oliviaScore || 0} onChange={(v) => setScore(b.id, 'oliviaScore', v)} color="var(--blush-deep)" /></div>
-                      <div><label>Taste — Dad</label><Score value={sc.dadScore || 0} onChange={(v) => setScore(b.id, 'dadScore', v)} color="var(--navy)" /></div>
+                      <div><label>Taste (Olivia)</label><Score value={sc.oliviaScore || 0} onChange={(v) => setScore(b.id, 'oliviaScore', v)} color="var(--blush-deep)" /></div>
+                      <div><label>Taste (Dad)</label><Score value={sc.dadScore || 0} onChange={(v) => setScore(b.id, 'dadScore', v)} color="var(--navy)" /></div>
                       <div><label>Looks</label><Score value={sc.looks || 0} onChange={(v) => setScore(b.id, 'looks', v)} color="var(--taxi-deep)" /></div>
                     </div>
 

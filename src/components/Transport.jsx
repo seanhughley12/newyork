@@ -13,7 +13,7 @@ export default function Transport() {
         <SectionHeader
           eyebrow="The NYC Transportation Challenge"
           title="Collect all four ways to move."
-          lead="Getting around is part of the adventure. Ride each one at least once and stamp it. Yes — the yellow taxi is officially on the list."
+          lead="Getting around is part of the adventure. Ride each one at least once and stamp it. Yes, the yellow taxi is officially on the list."
         />
       </Reveal>
 

@@ -34,7 +34,7 @@ export default function Omakase() {
                 <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1.6rem' }}>{omakase.restaurantName}</span>
               </div>
               <p style={{ opacity: 0.85, lineHeight: 1.5 }}>
-                Heads up: traditional sushi omakase often includes <strong>raw fish</strong> — but some bites are cooked or seared. You get to decide what you&rsquo;re up for.
+                Heads up: traditional sushi omakase often includes <strong>raw fish</strong>, but some bites are cooked or seared. You get to decide what you&rsquo;re up for.
               </p>
               {omakase.reservationTbd ? (
                 <span className="pill-note" style={{ background: 'rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>Reservation details coming soon</span>

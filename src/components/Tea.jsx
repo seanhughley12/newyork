@@ -18,7 +18,7 @@ export default function Tea() {
         <div className="grid grid-2" style={{ alignItems: 'center' }}>
           <Reveal>
             <div>
-              <SectionHeader eyebrow="Totally Optional" title="Afternoon tea?" lead="Saturday afternoon is protected breathing room. Tea only happens if it feels fun — not because a schedule says so." />
+              <SectionHeader eyebrow="Totally Optional" title="Afternoon tea?" lead="Completely up to you. We'll only do tea if it sounds fun that day." />
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: '0.4rem' }}>
                 {OPTS.map((o) => (
                   <button key={o.id} className={`chip ${o.cls} ${vote === o.id ? 'is-active' : ''}`} onClick={() => choose(o.id)}>{o.label}</button>

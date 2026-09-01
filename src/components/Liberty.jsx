@@ -9,7 +9,7 @@ export default function Liberty() {
           <Stamp kind="booked">Booked</Stamp>
           <span className="pill-note">Friday morning • Pedestal Reserve tickets</span>
         </div>
-        <SectionHeader eyebrow="Friday Adventure" title="Meeting Lady Liberty" lead="This one is locked in with real Pedestal Reserve tickets — the kind that let you go up inside. Here&rsquo;s how the adventure unfolds." />
+        <SectionHeader eyebrow="Friday Adventure" title="Meeting Lady Liberty" lead="This one is locked in with real Pedestal Reserve tickets, the kind that let you go up inside. Here&rsquo;s how the day goes." />
       </Reveal>
 
       <div className="grid grid-2" style={{ alignItems: 'stretch' }}>
